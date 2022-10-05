@@ -2,14 +2,17 @@
 
 ## Overview
 ![manipulator_repo_structure](images/manipulator_repo_structure.png)
-Welcome to the *interbotix_ros_manipulators* repository! This repo contains custom ROS packages to control the various types of arms sold at [Interbotix](https://www.trossenrobotics.com/). These ROS packages build upon the ROS driver nodes found in the [interbotix_ros_core](https://github.com/Interbotix/interbotix_ros_core) repository. Support-level software can be found in the [interbotix_ros_toolboxes](https://github.com/Interbotix/interbotix_ros_toolboxes) repository.
+Welcome to the *interbotix_ros_manipulators* repository! This repo contains custom ROS packages to control the various types of arms sold at [Trossen Robotics](https://www.trossenrobotics.com/). These ROS packages build upon the ROS driver nodes found in the [interbotix_ros_core](https://github.com/Interbotix/interbotix_ros_core) repository. Support-level software can be found in the [interbotix_ros_toolboxes](https://github.com/Interbotix/interbotix_ros_toolboxes) repository.
 
 ### Build Status
-#### X-Series Core Build Status
 
-[![build-xs-melodic](https://github.com/Interbotix/interbotix_ros_manipulators/actions/workflows/xs-melodic.yaml/badge.svg)](https://github.com/Interbotix/interbotix_ros_manipulators/actions/workflows/xs-melodic.yaml)
-[![build-xs-noetic](https://github.com/Interbotix/interbotix_ros_manipulators/actions/workflows/xs-noetic.yaml/badge.svg)](https://github.com/Interbotix/interbotix_ros_manipulators/actions/workflows/xs-noetic.yaml)
-[![build-xs-galactic](https://github.com/Interbotix/interbotix_ros_manipulators/actions/workflows/xs-galactic.yaml/badge.svg)](https://github.com/Interbotix/interbotix_ros_manipulators/actions/workflows/xs-galactic.yaml)
+| ROS Distro | X-Series ROS Manipulators Build |
+| :------- | :------- |
+| ROS 1 Melodic | [![build-xs-melodic](https://github.com/Interbotix/interbotix_ros_manipulators/actions/workflows/xs-melodic.yaml/badge.svg)](https://github.com/Interbotix/interbotix_ros_manipulators/actions/workflows/xs-melodic.yaml) |
+| ROS 1 Noetic | [![build-xs-noetic](https://github.com/Interbotix/interbotix_ros_manipulators/actions/workflows/xs-noetic.yaml/badge.svg)](https://github.com/Interbotix/interbotix_ros_manipulators/actions/workflows/xs-noetic.yaml) |
+| ROS 2 Galactic | [![build-xs-galactic](https://github.com/Interbotix/interbotix_ros_manipulators/actions/workflows/xs-galactic.yaml/badge.svg)](https://github.com/Interbotix/interbotix_ros_manipulators/actions/workflows/xs-galactic.yaml) |
+| ROS 2 Humble | [![build-xs-humble](https://github.com/Interbotix/interbotix_ros_manipulators/actions/workflows/xs-humble.yaml/badge.svg)](https://github.com/Interbotix/interbotix_ros_manipulators/actions/workflows/xs-humble.yaml) |
+| ROS 2 Rolling | [![build-xs-rolling](https://github.com/Interbotix/interbotix_ros_manipulators/actions/workflows/xs-rolling.yaml/badge.svg)](https://github.com/Interbotix/interbotix_ros_manipulators/actions/workflows/xs-rolling.yaml) |
 
 ## Repo Structure
 ```
@@ -26,6 +29,7 @@ GitHub Landing Page: Explains repository structure and contains a single directo
 │           ├── Demo Script 1
 │           ├── Demo Script 2
 |           └── Demo Script X
+├── CITATION.cff
 ├── LICENSE
 └── README.md
 ```
@@ -45,7 +49,7 @@ As shown above, there are five main levels to this repository. To clarify some o
     - *interbotix_XXarm_puppet* - make one or more 'puppet' arms copy the motion of a 'master' arm
     - *interbotix_XXarm_moveit_interface* - learn how to use MoveIt!'s MoveGroup Python or C++ APIs to control a robot arm
 
-- **Demo Script** - This refers to demo scripts that build upon the interface modules in the *interbotix_ros_toolboxes* repository. These modules essentially abstract away all ROS code, making it easy for a researcher with no ROS experience to interface with an arm as if it was just another object. It also makes sequencing robot motion a piece of cake. These scripts are written in languages that users may feel more comfortable with like Python and MATLAB.
+- **Demo Script** - This refers to demo scripts that build upon the interface modules in the *interbotix_ros_toolboxes* repository. These modules essentially abstract away all ROS code, making it easy for a researcher with no ROS experience to interface with an arm as if it was just another object. It also makes sequencing robot motion a piece of cake. These scripts are written in languages that users may feel more comfortable with like Python and MATLAB. The directories that contain demo scripts for each language may be found the in example directory, or in the package that specifically relates to their usage, such as the perception packages.
 
 Over time, the repo will grow to include more types of manipulators.
 
@@ -56,3 +60,15 @@ Feel free to send PRs to add features to currently existing Arm ROS packages or 
 - [Solomon Wiznitzer](https://github.com/swiz23) - **ROS Engineer**
 - [Luke Schmitt](https://github.com/lsinterbotix) - **Robotics Software Engineer**
 - [Levi Todes](https://github.com/LeTo37) - **CAD Engineer**
+
+## Citing
+
+If using this software for your research, please include the following citation in your publications:
+
+```bibtex
+@software{Wiznitzer_interbotix_ros_manipulators,
+  author = {Wiznitzer, Solomon and Schmitt, Luke and Trossen, Matt},
+  license = {BSD-3-Clause},
+  title = {{interbotix_ros_manipulators}},
+  url = {https://github.com/Interbotix/interbotix_ros_manipulators}
+}
